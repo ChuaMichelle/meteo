@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- bower packages -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/packages/highcharts.js"></script>
+
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="appMeteo" ng-controller="appCtrl">
+    <ion-side-menus>
+
+      <!-- Center content -->
+      <ion-side-menu-content>
+        <ion-header-bar class="bar-dark">
+          <button class="button button-icon">
+            <i class="icon ion-navicon"></i>
+          </button>
+          <h1 class="title">App Meteo</h1>
+        </ion-header-bar>
+        <ion-content>
+          <input type="file" custom-on-change="uploadFile">
+
+          <div id="air_temp"></div>
+          <div id="rel_humidity"></div>
+          <div id="air_pressure"></div>
+          <div id="wind_speed"></div>
+        </ion-content>
+      </ion-side-menu-content>
+
+
+
+    </ion-side-menus>
+  </body>
+</html>
